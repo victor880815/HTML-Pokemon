@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>寶可夢圖鑑</title>    
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+<script type="text/javascript">
+function formresponse() {
+var a = document.forms["form1"]["title"].value;    
+var b = document.forms["form1"]["name"].value;
+var c = document.forms["form1"]["type_1"].value;
+var d = document.forms["form1"]["type_2"].value;
+var e = document.forms["form1"]["total_points"].value;
+var f = document.forms["form1"]["hp"].value;
+var g = document.forms["form1"]["attack"].value;
+var h = document.forms["form1"]["defense"].value;
+var i = document.forms["form1"]["sp_attack"].value;
+var j = document.forms["form1"]["sp_defense"].value;
+var k = document.forms["form1"]["speed"].value;
+var l = document.forms["form1"]["introduce"].value;
+var m = document.forms["form1"]["picture"].value;
+
+
+
+
+
+var str = "";
+
+if (a==null || a=="")
+  {
+alert("title不可為空白!");
+return false;
+str += "title不可為空白!\n";
+  }
+
+if (b==null || b=="")
+  {
+alert("名稱不可為空白!");
+return false;
+str += "名稱不可為空白!\n";
+  }
+
+if (c==null || c=="")
+  {
+alert("屬性１不可為空白!");
+return false;
+str += "屬性１不可為空白!\n";
+  }
+
+if (d==null || d=="")
+  {
+alert("屬性2不可為空白!");
+return false;
+str += "屬性2不可為空白!\n";
+  }
+
+if (e==null || e=="")
+  {
+alert("總戰鬥力不可為空白!");
+return false;
+str += "總戰鬥力不可為空白!";
+  }
+
+if (f==null || f=="")
+  {
+alert("血量不可為空白!");
+return false;
+str += "血量不可為空白!\n";
+  }
+
+if (g==null || g=="")
+  {
+alert("攻擊不可為空白!");
+return false;
+str += "攻擊不可為空白!\n";
+  }
+
+if (h==null || h=="")
+  {
+alert("防禦不可為空白!");
+return false;
+str += "防禦不可為空白!\n";
+  }
+
+if (i==null || i=="")
+  {
+alert("特攻不可為空白!");
+return false;
+str += "特攻不可為空白!\n";
+  }
+  
+if (j==null || j=="")
+  {
+alert("特防不可為空白!");
+return false;
+str += "特防不可為空白!\n";
+  }
+
+if (k==null || k=="")
+  {
+alert("血量不可為空白!");
+return false;
+str += "血量不可為空白!\n";
+  }
+
+if (l==null || l=="")
+  {
+alert("介紹不可為空白!");
+return false;
+str += "介紹不可為空白!\n";
+  }
+
+if (m==null || m=="")
+  {
+alert("圖片網址不可為空白!");
+return false;
+str += "圖片網址不可為空白!\n";
+  }
+
+if( str != "" )
+ alert(str);
+
+  
+else
+  {
+var MySubmit = "https://docs.google.com/forms/d/e/1FAIpQLSeyosFAwONBiagNDrBXBDfZM2YE7knne1XnDrytBqBOuoxjYQ/formResponse?usp=pp_url&entry.823688541=" + a + "&entry.2141263756=" + b + "&entry.1405839279=" + c + "&entry.67469185=" + d + "&entry.170966479=" + e + "&entry.1326149198=" + f + "&entry.1919409528=" + g + "&entry.32193919=" + h + "&entry.1832018376=" + i + "&entry.2110811543=" + j + "&entry.281105923=" + k + "&entry.593301062=" + l + "&entry.853569752=" + m;
+var NewOpen = window.open(MySubmit);
+  }
+
+}
+</script>
+    
+    
+    
+    
+    
+  </head>
+
+<body background="https://scontent.ftpe5-1.fna.fbcdn.net/v/t1.15752-9/132568789_397963621512221_1819243945118685938_n.png?_nc_cat=111&ccb=3&_nc_sid=ae9488&_nc_ohc=R2W707ENckAAX-oersG&_nc_ht=scontent.ftpe5-1.fna&oh=cdc5e3c817ba3c76ed5f826bb7474557&oe=605D490B">
+    
+<form name="form1" action="javascript:formresponse();">
+
+<div class="row">
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s6">
+        <font size="5" color="#0000FF">title(前面需加上“名稱：”): <input type="text" name="title"><br /></font>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="input-field col s6">
+        <font size="5" color="#0000FF">名稱: <input type="text" name="name"><br /></font>
+      </div>
+    </div>
+        
+    <div class="row">
+        <div class="input-field col s6">
+        <font size="5" color="#0000FF">屬性１: <input type="text" name="type_1"><br /></font>
+        </div>
+    </div>
+
+        
+    <div class="row">
+        <div class="input-field col s6">
+        <font size="5" color="#0000FF">屬性2: <input type="text" name="type_2"><br /></font>
+        </div>
+    </div>
+
+          
+    <div class="row">
+        <div class="input-field col s6">
+        <font size="5" color="#0000FF">總戰鬥力: <input type="text" name="total_points"><br /></font>
+        </div>
+    </div>
+
+          
+    <div class="row">
+        <div class="input-field col s6">
+        <font size="5" color="#0000FF">血量: <input type="text" name="hp"><br /></font>
+        </div>
+    </div>
+
+          
+    <div class="row">
+        <div class="input-field col s6">
+        <font size="5" color="#0000FF">攻擊: <input type="text" name="attack"><br /></font>
+        </div>
+    </div>
+
+          
+    <div class="row">
+        <div class="input-field col s6">
+        <font size="5" color="#0000FF">防禦: <input type="text" name="defense"><br /></font>
+        </div>
+    </div>
+
+          
+    <div class="row">
+        <div class="input-field col s6">
+        <font size="5" color="#0000FF">特攻: <input type="text" name="sp_attack"><br /></font>
+        </div>
+    </div>
+
+          
+    <div class="row">
+        <div class="input-field col s6">
+        <font size="5" color="#0000FF">特防: <input type="text" name="sp_defense"><br /></font>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="input-field col s12">
+        <font size="5" color="#0000FF">速度: <input type="text" name="speed"><br /></font>
+        </div>
+    </div>  
+    
+    <div class="row">
+        <div class="input-field col s12">
+        <font size="5" color="#0000FF">介紹: <input type="text" name="introduce"><br /></font>
+        </div>
+    </div>  
+ 
+    <div class="row">
+        <div class="input-field col s12">
+        <font size="5" color="#0000FF">圖片網址: <input type="text" name="picture"><br /></font>
+        </div>
+    </div>      
+    
+    <div class="row">
+      <div class="input-field col s12">
+       
+         <button class="btn waves-effect waves-light" type="submit" name="action">送出
+         <i class="material-icons right">cloud_upload</i>
+         </button>
+       
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="input-field col s12">
+            <button class="btn waves-effect waves-light" onclick="location.href='index.html'" type="button">返回
+           <i class="material-icons right">home_work</i>
+           </button>
+        </div>
+      </div>
+    
+  </form>
+</div>
+
+
+  </body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html  >
+<head>
+  <!--Import Google Icon Font-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Site made with Mobirise Website Builder v4.12.3, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v4.12.3, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/pokemon-250x92.png" type="image/x-icon">
+  <meta name="description" content="Web Page Generator Description">
+  
+  
+
+  <!-- Site made with Mobirise Website Builder v4.12.3, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v4.12.3, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/pokemon-250x92.png" type="image/x-icon">
+  <meta name="description" content="Web Page Generator Description">
+  
+  
+  <title>寶可夢圖鑑</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/animatecss/animate.min.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+  <script type='text/javascript'>
+  
+  
+  
+  
+  
+  
+  
+   // 於Google Spreadsheet建立的範例資料為 https://docs.google.com/spreadsheets/d/e/2PACX-1vR9LivzlVjV3Mp9EOw0rCh46tDacBY6uQ8AT4k6ObLecvL8P-BpgKza9IOyGfFkP3tEdNSereSt8wxT/pubhtml
+   
+   var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/15Y8natJKQFfMbaW_n_iVK-af6xY9qAIw4nBTCzx27_M/edit#gid=716841244';
+  
+   
+  function init() {
+  Tabletop.init( { key: publicSpreadsheetUrl,
+  callback: showInfo,
+  simpleSheet: true } )
+   }
+  
+  function showInfo(data, tabletop) {
+  //alert('Successfully processed!')
+  console.log(data);
+  
+  
+  
+  var text="";
+  var i;
+  
+  for (i = 0;i<data.length; i++) {
+  
+   
+    text +=' <a href ="pokedex.html?pid=' + i +'">';
+    text +=' <div class="card">';
+    text +=' <div class="card-image">';
+    text +=' <img src="' + data[i].picture + '">';
+    //text +='  <span class="card-title"><font size="６">' +  "&nbsp" + "&nbsp" + "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" + data[i].title + '</font></span>';
+    text +='<a target="_blank" href="pokedex.html?pid=' + i + '"><font size="6.5" color = "#EEEE00">'+  "&nbsp" +  "&nbsp" +  "&nbsp" + "&nbsp" + "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" + data[i].name +'</font><br>' + '</a>';
+    text +=' </div>';
+    text +='</div>';
+    text +='</a>';
+    text +='</div>';
+  }
+  
+  document.getElementById("demo").innerHTML = text;
+  
+  }
+  
+   window.addEventListener('DOMContentLoaded', init)
+  </script> 
+
+
+    
+  
+  
+</head>
+<body background="https://scontent.frmq2-2.fna.fbcdn.net/v/t1.15752-9/133805029_853494545414649_3393547666029884934_n.png?_nc_cat=107&ccb=2&_nc_sid=ae9488&_nc_ohc=-CLy4R6xGHwAX93xMSj&_nc_ht=scontent.frmq2-2.fna&oh=eb19c3937017b83d03748df8e2df068e&oe=600DF867">
+
+         
+ 
+
+  <section class="menu cid-skhqDRSzeY" once="menu" id="menu2-9">
+
+    
+
+    <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm bg-color transparent">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+        <div class="menu-logo">
+            <div class="navbar-brand">
+                <span class="navbar-logo">
+                    
+                        <a href="index.html"><img src="assets/images/pokemon-250x92.png" alt="Mobirise" title="" style="height: 4.9rem;"></a>
+                    
+                </span>
+                
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item">
+                    <a class="nav-link link text-danger display-5" href="index.html"><span class="mbri-home mbr-iconfont mbr-iconfont-btn"></span>HOME</a>
+                </li><li class="nav-item"><a class="nav-link link text-danger display-5" href="pokedex1.html" aria-expanded="false"><span class="socicon socicon-collectorz mbr-iconfont mbr-iconfont-btn"></span>寶可夢圖鑑</a></li><li class="nav-item"><a class="nav-link link text-danger display-5" href="pokedex2.html" aria-expanded="false" target="_blank"><span class="mobi-mbri mobi-mbri-cloud mbr-iconfont mbr-iconfont-btn"></span>新增共享</a></li></ul>
+            <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4" href="pokedex3.html"><span class="mbri-mobile2 mbr-iconfont mbr-iconfont-btn"></span>聯絡我們</a></div>
+        </div>
+    </nav>
+</section>
+
+<div class="row" id="demo">
+</div>
+
+<section class="engine"><a href="https://mobirise.info/g">build a site</a></section><section class="cid-skoWa2uZhq" id="footer1-m">
+
+    
+
+    
+
+    <div class="container">
+        <div class="media-container-row content text-white">
+            <div class="col-12 col-md-3">
+                <div class="media-wrap">
+                    <a href="index.html">
+                        <img src="assets/images/133857523-219335473080506-1519300207160253590-n-192x193.png" alt="Mobirise" title="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 mbr-fonts-style display-7">
+                <h5 class="pb-3">官方網站</h5>
+                <p class="mbr-text"><a href="https://tw.portal-pokemon.com/play/pokedex" target="_blank">寶可夢圖鑑</a></p>
+            </div>
+            <div class="col-12 col-md-3 mbr-fonts-style display-7">
+                <h5 class="pb-3">
+                    Contacts
+                </h5>
+                <p class="mbr-text"><a href="pokedex2.html" target="_blank">聯絡我們</a></p>
+            </div>
+            <div class="col-12 col-md-3 mbr-fonts-style display-7">
+                <h5 class="pb-3">
+                    Links
+                </h5>
+                <p class="mbr-text"><a href="https://www.facebook.com/Pokemon.Official.Taiwan/" target="_blank">Facebook</a><br><a href="https://www.youtube.com/channel/UCUsB9KTwSGgPlIARzdaKb_Q" target="_blank">Youtube&nbsp;</a><br><a class="text-primary" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftw.portal-pokemon.com%2Fplay%2Fpokedex" target="_blank">Twitter</a></p>
+            </div>
+        </div>
+        <div class="footer-lower">
+            <div class="media-container-row">
+                <div class="col-sm-12">
+                    <hr>
+                </div>
+            </div>
+            <div class="media-container-row mbr-white">
+                <div class="col-sm-6 copyright">
+                    <p class="mbr-text mbr-fonts-style display-7">
+                        ©  2020 Victor Lin - All Rights Reserved
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <div class="social-list align-right">
+                        <div class="soc-item">
+                            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftw.portal-pokemon.com%2Fplay%2Fpokedex" target="_blank">
+                                <span class="mbr-iconfont mbr-iconfont-social socicon-twitter socicon"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://www.facebook.com/Pokemon.Official.Taiwan/" target="_blank">
+                                <span class="mbr-iconfont mbr-iconfont-social socicon-facebook socicon"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://www.youtube.com/channel/UCUsB9KTwSGgPlIARzdaKb_Q" target="_blank">
+                                <span class="mbr-iconfont mbr-iconfont-social socicon-youtube socicon"></span>
+                            </a>
+                        </div>
+                        
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  <script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/popper/popper.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets/tether/tether.min.js"></script>
+  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
+  <script src="assets/viewportchecker/jquery.viewportchecker.js"></script>
+  <script src="assets/dropdown/js/nav-dropdown.js"></script>
+  <script src="assets/dropdown/js/navbar-dropdown.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+  
+  
+  <input name="animation" type="hidden">
+  <div id="demo"></div>   
+
+  </body>
+</html>

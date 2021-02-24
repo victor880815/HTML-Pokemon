@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>寶可夢圖鑑</title>
+
+ <!-- Site made with Mobirise Website Builder v4.12.3, https://mobirise.com -->
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="generator" content="Mobirise v4.12.3, mobirise.com">
+ <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+ <link rel="shortcut icon" href="assets/images/pokemon-250x92.png" type="image/x-icon">
+ <meta name="description" content="Web Page Generator Description">
+ 
+ 
+ <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
+ <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+ <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+ <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+ <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+ <link rel="stylesheet" href="assets/dropdown/css/style.css">
+ <link rel="stylesheet" href="assets/tether/tether.min.css">
+ <link rel="stylesheet" href="assets/socicon/css/styles.css">
+ <link rel="stylesheet" href="assets/animatecss/animate.min.css">
+ <link rel="stylesheet" href="assets/theme/css/style.css">
+ <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+
+<!-- 利用Tabletop.JS讀取Google Sheet https://github.com/jsoma/tabletop -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+<script type='text/javascript'>
+
+// 取得網址裡的參數
+function GetUrlVar(VarName)
+{
+name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+var regexS = "[\\?&]" + VarName + "=([^&#]*)";
+var regex = new RegExp(regexS);
+var results = regex.exec(window.location.href);
+if (results == null)
+return "";
+else
+return results[1];
+}
+
+
+
+
+
+ // 於Google Spreadsheet建立的範例資料為 https://docs.google.com/spreadsheets/d/e/2PACX-1vR9LivzlVjV3Mp9EOw0rCh46tDacBY6uQ8AT4k6ObLecvL8P-BpgKza9IOyGfFkP3tEdNSereSt8wxT/pubhtml
+ var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/15Y8natJKQFfMbaW_n_iVK-af6xY9qAIw4nBTCzx27_M/edit#gid=716841244';
+
+function init() {
+Tabletop.init( { key: publicSpreadsheetUrl,
+callback: showInfo,
+simpleSheet: true } )
+ }
+
+function showInfo(data, tabletop) {
+//alert('Successfully processed!')
+console.log(data);
+
+
+
+ 
+// 要先取得網址裡的路徑起點終點經緯度參數
+var i = decodeURIComponent(GetUrlVar('pid'));
+document.getElementById("demo").innerHTML = '<center><font size="7" color="#66DD00">' + data[i].name + '</font><br></center>'                                          
+                                          + '<font size="6.5">' +     "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp"+  "&nbsp"+  "&nbsp" + data[i].type_1 + '</font>' 
+                                          + '<font size="6.5" color="white">' +  "&nbsp" +  "&nbsp" +  "&nbsp"+  "&nbsp"+ "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp"+  "&nbsp"+  "&nbsp"+ "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp"+  "&nbsp"+  "&nbsp"+ "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp"+  "&nbsp"+  "&nbsp"+ "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp"+  "&nbsp"+  "&nbsp"+ "&nbsp" +  "&nbsp" +  "&nbsp" + "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" + data[i].attack + '</font>' 
+                                          + '<font size="6.5" color="white">' +  "&nbsp" +  "&nbsp" +  "&nbsp"+  "&nbsp"+ "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp"+  "&nbsp"+  "&nbsp"+ "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp"+  "&nbsp"+  "&nbsp"+ "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp"+  "&nbsp"+  "&nbsp"+ "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp"+  "&nbsp"+  "&nbsp"+ "&nbsp" +  "&nbsp" +  "&nbsp" + "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" + data[i].sp_attack + '</font><br>' 
+                                          + '<font size="6.5">' +     "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp"+  "&nbsp"+  "&nbsp" + data[i].type_2 + '</font>' 
+                                          + '<font size="6.5" color="white">' +  "&nbsp" +  "&nbsp" +  "&nbsp"+  "&nbsp"+  "&nbsp"+ "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp"+  "&nbsp"+  "&nbsp"+ "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp"+  "&nbsp"+  "&nbsp"+ "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp"+  "&nbsp"+  "&nbsp"+ "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp"+  "&nbsp"+  "&nbsp"+ "&nbsp" +  "&nbsp" +  "&nbsp" + "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" + data[i].defense + '</font>' 
+                                          + '<font size="6.5" color="white">' +  "&nbsp" +  "&nbsp" +  "&nbsp"+  "&nbsp"+  "&nbsp"+ "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp"+  "&nbsp"+  "&nbsp"+ "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp"+  "&nbsp"+  "&nbsp"+ "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp"+  "&nbsp"+  "&nbsp"+ "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp"+  "&nbsp"+  "&nbsp"+ "&nbsp" +  "&nbsp" +  "&nbsp" + "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp"  + data[i].sp_defense + '</font><br>'  
+                                          + '<font size="6.5">' +     "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp"+  "&nbsp"+  "&nbsp" + data[i].total_points + '</font>' 
+                                          + '<font size="6.5" color="white">' +  "&nbsp" +  "&nbsp" +  "&nbsp"+  "&nbsp"+  "&nbsp"+ "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp"+  "&nbsp"+  "&nbsp"+ "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp"+  "&nbsp"+  "&nbsp"+ "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp"+  "&nbsp"+  "&nbsp"+ "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp"+  "&nbsp" +  "&nbsp" + data[i].hp + '</font>' 
+                                          + '<font size="6.5" color="white">' +  "&nbsp" +  "&nbsp" +  "&nbsp"+  "&nbsp"+  "&nbsp"+ "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp"+  "&nbsp"+  "&nbsp"+ "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp"+  "&nbsp"+  "&nbsp"+ "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp"+  "&nbsp"+  "&nbsp"+ "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp"+  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp" +  "&nbsp"+  "&nbsp" +  "&nbsp" +  "&nbsp" + data[i].speed + '</font><br>' 
+                                          + '<center><font size="6.5">' + '</font><img src="' + data[i].picture + '"></center><br><br><br>'
+                                          + '<center><font size="5" color="#66DD00">' + data[i].introduce + '</font></center>'  
+}
+window.addEventListener('DOMContentLoaded', init)
+
+
+
+
+</script>
+
+
+
+<head>
+
+<body background="https://scontent.frmq2-2.fna.fbcdn.net/v/t1.15752-9/132802332_195308132313124_6336316939531183979_n.png?_nc_cat=100&ccb=2&_nc_sid=ae9488&_nc_ohc=fIK9mJ7ULHUAX-aAHNf&_nc_ht=scontent.frmq2-2.fna&oh=fe50455758a804488019e83a4b1394a0&oe=6010792D">
+
+    <h1>&nbsp</h1>    
+    <h3>&nbsp</h3>
+
+    <section class="menu cid-skhqDRSzeY" once="menu" id="menu2-9">
+
+    
+
+        <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm bg-color transparent">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="menu-logo">
+                <div class="navbar-brand">
+                    <span class="navbar-logo">
+                        
+                            <a href="index.html"><img src="assets/images/pokemon-250x92.png" alt="Mobirise" title="" style="height: 4.9rem;"></a>
+                        
+                    </span>
+                    
+                </div>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item">
+                        <a class="nav-link link text-danger display-5" href="index.html"><span class="mbri-home mbr-iconfont mbr-iconfont-btn"></span>HOME</a>
+                    </li><li class="nav-item"><a class="nav-link link text-danger display-5" href="pokedex1.html" aria-expanded="false"><span class="socicon socicon-collectorz mbr-iconfont mbr-iconfont-btn"></span>寶可夢圖鑑</a></li><li class="nav-item"><a class="nav-link link text-danger display-5" href="pokedex2.html" aria-expanded="false"><span class="mobi-mbri mobi-mbri-cloud mbr-iconfont mbr-iconfont-btn"></span>新增共享</a></li></ul>
+                <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4" href="pokedex3.html"><span class="mbri-mobile2 mbr-iconfont mbr-iconfont-btn"></span>聯絡我們</a></div>
+            </div>
+        </nav>
+    </section>
+    
+    
+    
+      <script src="assets/web/assets/jquery/jquery.min.js"></script>
+      <script src="assets/popper/popper.min.js"></script>
+      <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+      <script src="assets/smoothscroll/smooth-scroll.js"></script>
+      <script src="assets/dropdown/js/nav-dropdown.js"></script>
+      <script src="assets/dropdown/js/navbar-dropdown.js"></script>
+      <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
+      <script src="assets/tether/tether.min.js"></script>
+      <script src="assets/viewportchecker/jquery.viewportchecker.js"></script>
+      <script src="assets/ytplayer/jquery.mb.ytplayer.min.js"></script>
+      <script src="assets/vimeoplayer/jquery.mb.vimeo_player.js"></script>
+      <script src="assets/bootstrapcarouselswipe/bootstrap-carousel-swipe.js"></script>
+      <script src="assets/theme/js/script.js"></script>
+      <script src="assets/slidervideo/script.js"></script>
+      
+      
+      <input name="animation" type="hidden">  
+<div id="demo"></div>
+
+</body>
+</html>
